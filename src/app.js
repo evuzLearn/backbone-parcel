@@ -1,14 +1,14 @@
-import { View } from "backbone";
-import _ from "underscore";
+import { View } from 'backbone';
+import _ from 'underscore';
 
-import { Title } from "./components/Title";
+import { Title } from './components/Title';
 
-import "./styles.css";
+import './styles.css';
 
 export const App = View.extend({
   initialize() {
-    this.title_one = new Title({ model: { title: "Hello World" } });
-    this.title_two = new Title({ model: { title: "Second Hello World" } });
+    this.title_one = new Title({ model: { title: 'Hello World' } });
+    this.title_two = new Title({ model: { title: 'Second Hello World' } });
     this.render();
     return this;
   },
@@ -18,7 +18,9 @@ export const App = View.extend({
       <div class="second-title"></div>
     `);
     this.$el.html(tmpl);
-    this.$(".first-title").replaceWith(this.title_one.el);
-    this.$(".second-title").replaceWith(this.title_two.el);
-  }
+    this.$('.first-title').replaceWith(this.title_one.el);
+    this.$('.second-title').replaceWith(this.title_two.el);
+  },
 });
+
+export default App;

@@ -1,10 +1,10 @@
-import { View } from "backbone";
-import _ from "underscore";
+import { View } from 'backbone';
+import _ from 'underscore';
 
 import './title.css';
 
 export const Title = View.extend({
-  template: _.template("<h1><%- title %></h1>"),
+  template: _.template('<h1><%- title %></h1>'),
   className: 'Title',
   initialize() {
     this.render();
@@ -12,5 +12,7 @@ export const Title = View.extend({
   },
   render() {
     this.$el.html(this.template(this.model));
-  }
+  },
 });
+
+export default Title;
